@@ -1,0 +1,7 @@
+/.idea/
+/.idea_modules/
+.classpath
+.settings
+.project
+.cache
+target/
