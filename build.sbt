@@ -18,6 +18,6 @@ libraryDependencies ++= Seq(
 //  "com.twitter" %% "tormenta-core" % tormentaVersion,
   "com.twitter" %% "tormenta-twitter" % tormentaVersion,
 //  "org.apache.storm" % "storm-core" % "0.9.2",
-  "storm" % "storm" % "0.9.0-wip15" % "provided",
+  "storm" % "storm" % "0.9.0-wip15",
   "org.twitter4j" % "twitter4j-stream" % "4.0.2"
 )
