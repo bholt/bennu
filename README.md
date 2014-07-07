@@ -1,1 +1,1 @@
-Typesafe Activator template for a basic Finagle app.
+Implementing a couple things using Summingbird and the Twitter Streaming API.
