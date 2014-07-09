@@ -34,10 +34,10 @@ object BennuStorm {
   implicit val batcher = Batcher.ofHours(1)
 
   lazy val config = new ConfigurationBuilder()
-    .setOAuthConsumerKey("7d4EplXcJkDkyV9rjFkfafdAF")
-    .setOAuthConsumerSecret("RX1P8N4KyO95R9BL7ziDaXOzedB7QQS9TRjikxXzQjjZYrfZUf")
+    .setOAuthConsumerKey("ulFxJfWnhDMEa47Ua3WWlzBBd")
+    .setOAuthConsumerSecret("qAAsr15yiMherHpPer2f9hUmqgcme4HcmQu61D4RShneywhFyt")
     .setOAuthAccessToken("133557422-Ja0bKaoX34e1b14r3ZeHebuS4CMb4C9p47U0c3l1")
-    .setOAuthAccessTokenSecret("tF1HxKLH8PGx7JR8MOfKrlGnNAUnRfvBnfBVEHFztP4qDg")
+    .setOAuthAccessTokenSecret("tF1HxKLH8PGx7JR8MOfKrlGnNAUnRfvBnfBVEHFztP4qD")
     .setJSONStoreEnabled(true) // required for JSON serialization
     .build
 
