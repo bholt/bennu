@@ -14,12 +14,10 @@ object Bennu {
     val hashTags = stream.flatMap(status => status.getText.split(" ").filter(_.startsWith("#")))
 
     val topCounts60 = hashTags.map(_ -> 1).reduceByKeyAndWindow(_ + _, Seconds(60))
-                              .map{case (topic, count) => (count, topic)}
-                              .transform(_.sortByKey(false))
+                              .map(_.swap).transform(_.sortByKey(ascending=false))
 
     val topCounts10 = hashTags.map(_ -> 1).reduceByKeyAndWindow(_ + _, Seconds(10))
-                              .map{case (topic, count) => (count, topic)}
-                              .transform(_.sortByKey(false))
+                              .map(_.swap).transform(_.sortByKey(ascending=false))
 
     // Print popular hashtags
     topCounts60.foreachRDD(rdd => {
