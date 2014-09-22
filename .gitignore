@@ -5,3 +5,5 @@
 .project
 .cache
 target/
+
+twitterapi.properties

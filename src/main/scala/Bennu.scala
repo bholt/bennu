@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 import org.apache.spark._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
@@ -5,8 +8,16 @@ import StreamingContext._
 import org.apache.spark.SparkContext._
 
 object Bennu {
-  
+
+  def loadProperties(filename: String) = {
+    val p = new Properties(System.getProperties)
+    p.load(new FileInputStream(filename))
+    System.setProperties(p)
+  }
+
   def main(args: Array[String]) {
+    loadProperties("twitterapi.properties")
+
     val conf = new SparkConf().setAppName("Bennu").setMaster("local[*]")
     val ssc = new StreamingContext(conf, Seconds(1))    
     val stream = TwitterUtils.createStream(ssc, None)
